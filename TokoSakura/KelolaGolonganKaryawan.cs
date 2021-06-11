@@ -16,5 +16,11 @@ namespace TokoSakura
         {
             InitializeComponent();
         }
+
+        private void btnSimpan_Click(object sender, EventArgs e)
+        {
+            
+        }
+        
     }
 }

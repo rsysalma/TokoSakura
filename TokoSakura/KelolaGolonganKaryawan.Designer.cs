@@ -146,6 +146,7 @@
             this.btnSimpan.TabIndex = 22;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.UseVisualStyleBackColor = false;
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // btnCari
             // 

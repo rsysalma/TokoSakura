@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KelolaSupplier));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,12 +44,32 @@
             this.btnUbah = new System.Windows.Forms.Button();
             this.btnSimpan = new System.Windows.Forms.Button();
             this.btnCari = new System.Windows.Forms.Button();
+            this.epWrong = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epWarning = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tokoSakuraDataSet = new TokoSakura.TokoSakuraDataSet();
+            this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.supplierTableAdapter = new TokoSakura.TokoSakuraDataSetTableAdapters.SupplierTableAdapter();
+            this.kodeSupplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaSupplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alamatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noTeleponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epWrong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epWarning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tokoSakuraDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kodeSupplierDataGridViewTextBoxColumn,
+            this.namaSupplierDataGridViewTextBoxColumn,
+            this.alamatDataGridViewTextBoxColumn,
+            this.noTeleponDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.supplierBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(43, 92);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(349, 288);
@@ -59,7 +80,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(414, 176);
+            this.label5.Location = new System.Drawing.Point(414, 210);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 76;
@@ -67,24 +88,27 @@
             // 
             // txtNoTelp
             // 
-            this.txtNoTelp.Location = new System.Drawing.Point(548, 178);
+            this.txtNoTelp.Location = new System.Drawing.Point(548, 210);
             this.txtNoTelp.Name = "txtNoTelp";
             this.txtNoTelp.Size = new System.Drawing.Size(188, 20);
             this.txtNoTelp.TabIndex = 75;
+            this.txtNoTelp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNoTelp_KeyPress);
+            this.txtNoTelp.Leave += new System.EventHandler(this.txtNoTelp_Leave);
             // 
             // txtAlamat
             // 
-            this.txtAlamat.Location = new System.Drawing.Point(548, 210);
+            this.txtAlamat.Location = new System.Drawing.Point(548, 178);
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(188, 20);
             this.txtAlamat.TabIndex = 74;
+            this.txtAlamat.Leave += new System.EventHandler(this.txtAlamat_Leave);
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(414, 208);
+            this.label4.Location = new System.Drawing.Point(414, 178);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 20);
             this.label4.TabIndex = 73;
@@ -118,6 +142,8 @@
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(188, 20);
             this.txtNama.TabIndex = 69;
+            this.txtNama.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNama_KeyPress);
+            this.txtNama.Leave += new System.EventHandler(this.txtNama_Leave);
             // 
             // txtID
             // 
@@ -125,6 +151,7 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(188, 20);
             this.txtID.TabIndex = 68;
+            this.txtID.Leave += new System.EventHandler(this.txtID_Leave);
             // 
             // btnbatal
             // 
@@ -137,6 +164,7 @@
             this.btnbatal.TabIndex = 67;
             this.btnbatal.Text = "Batal";
             this.btnbatal.UseVisualStyleBackColor = false;
+            this.btnbatal.Click += new System.EventHandler(this.btnbatal_Click);
             // 
             // btnHapus
             // 
@@ -149,6 +177,7 @@
             this.btnHapus.TabIndex = 66;
             this.btnHapus.Text = "Hapus";
             this.btnHapus.UseVisualStyleBackColor = false;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // btnUbah
             // 
@@ -161,6 +190,7 @@
             this.btnUbah.TabIndex = 65;
             this.btnUbah.Text = "Ubah";
             this.btnUbah.UseVisualStyleBackColor = false;
+            this.btnUbah.Click += new System.EventHandler(this.btnUbah_Click);
             // 
             // btnSimpan
             // 
@@ -173,6 +203,7 @@
             this.btnSimpan.TabIndex = 64;
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.UseVisualStyleBackColor = false;
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // btnCari
             // 
@@ -185,6 +216,55 @@
             this.btnCari.TabIndex = 63;
             this.btnCari.Text = "Cari";
             this.btnCari.UseVisualStyleBackColor = false;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
+            // 
+            // epWrong
+            // 
+            this.epWrong.ContainerControl = this;
+            this.epWrong.Icon = ((System.Drawing.Icon)(resources.GetObject("epWrong.Icon")));
+            // 
+            // epWarning
+            // 
+            this.epWarning.ContainerControl = this;
+            this.epWarning.Icon = ((System.Drawing.Icon)(resources.GetObject("epWarning.Icon")));
+            // 
+            // tokoSakuraDataSet
+            // 
+            this.tokoSakuraDataSet.DataSetName = "TokoSakuraDataSet";
+            this.tokoSakuraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // supplierBindingSource
+            // 
+            this.supplierBindingSource.DataMember = "Supplier";
+            this.supplierBindingSource.DataSource = this.tokoSakuraDataSet;
+            // 
+            // supplierTableAdapter
+            // 
+            this.supplierTableAdapter.ClearBeforeFill = true;
+            // 
+            // kodeSupplierDataGridViewTextBoxColumn
+            // 
+            this.kodeSupplierDataGridViewTextBoxColumn.DataPropertyName = "Kode_Supplier";
+            this.kodeSupplierDataGridViewTextBoxColumn.HeaderText = "Kode_Supplier";
+            this.kodeSupplierDataGridViewTextBoxColumn.Name = "kodeSupplierDataGridViewTextBoxColumn";
+            // 
+            // namaSupplierDataGridViewTextBoxColumn
+            // 
+            this.namaSupplierDataGridViewTextBoxColumn.DataPropertyName = "Nama_Supplier";
+            this.namaSupplierDataGridViewTextBoxColumn.HeaderText = "Nama_Supplier";
+            this.namaSupplierDataGridViewTextBoxColumn.Name = "namaSupplierDataGridViewTextBoxColumn";
+            // 
+            // alamatDataGridViewTextBoxColumn
+            // 
+            this.alamatDataGridViewTextBoxColumn.DataPropertyName = "Alamat";
+            this.alamatDataGridViewTextBoxColumn.HeaderText = "Alamat";
+            this.alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
+            // 
+            // noTeleponDataGridViewTextBoxColumn
+            // 
+            this.noTeleponDataGridViewTextBoxColumn.DataPropertyName = "No_Telepon";
+            this.noTeleponDataGridViewTextBoxColumn.HeaderText = "No_Telepon";
+            this.noTeleponDataGridViewTextBoxColumn.Name = "noTeleponDataGridViewTextBoxColumn";
             // 
             // KelolaSupplier
             // 
@@ -210,7 +290,12 @@
             this.DoubleBuffered = true;
             this.Name = "KelolaSupplier";
             this.Text = "Kelola Supplier";
+            this.Load += new System.EventHandler(this.KelolaSupplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epWrong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epWarning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tokoSakuraDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +317,14 @@
         private System.Windows.Forms.Button btnUbah;
         private System.Windows.Forms.Button btnSimpan;
         private System.Windows.Forms.Button btnCari;
+        private System.Windows.Forms.ErrorProvider epWrong;
+        private System.Windows.Forms.ErrorProvider epWarning;
+        private TokoSakuraDataSet tokoSakuraDataSet;
+        private System.Windows.Forms.BindingSource supplierBindingSource;
+        private TokoSakuraDataSetTableAdapters.SupplierTableAdapter supplierTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kodeSupplierDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaSupplierDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn alamatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noTeleponDataGridViewTextBoxColumn;
     }
 }
