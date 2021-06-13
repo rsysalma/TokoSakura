@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KelolaSupplier));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.kodeSupplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaSupplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alamatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noTeleponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tokoSakuraDataSet = new TokoSakura.TokoSakuraDataSet();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNoTelp = new System.Windows.Forms.TextBox();
             this.txtAlamat = new System.Windows.Forms.TextBox();
@@ -46,18 +52,12 @@
             this.btnCari = new System.Windows.Forms.Button();
             this.epWrong = new System.Windows.Forms.ErrorProvider(this.components);
             this.epWarning = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tokoSakuraDataSet = new TokoSakura.TokoSakuraDataSet();
-            this.supplierBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.supplierTableAdapter = new TokoSakura.TokoSakuraDataSetTableAdapters.SupplierTableAdapter();
-            this.kodeSupplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namaSupplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alamatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noTeleponDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tokoSakuraDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epWrong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epWarning)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tokoSakuraDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -74,6 +74,40 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(349, 288);
             this.dataGridView1.TabIndex = 5;
+            // 
+            // kodeSupplierDataGridViewTextBoxColumn
+            // 
+            this.kodeSupplierDataGridViewTextBoxColumn.DataPropertyName = "Kode_Supplier";
+            this.kodeSupplierDataGridViewTextBoxColumn.HeaderText = "Kode_Supplier";
+            this.kodeSupplierDataGridViewTextBoxColumn.Name = "kodeSupplierDataGridViewTextBoxColumn";
+            // 
+            // namaSupplierDataGridViewTextBoxColumn
+            // 
+            this.namaSupplierDataGridViewTextBoxColumn.DataPropertyName = "Nama_Supplier";
+            this.namaSupplierDataGridViewTextBoxColumn.HeaderText = "Nama_Supplier";
+            this.namaSupplierDataGridViewTextBoxColumn.Name = "namaSupplierDataGridViewTextBoxColumn";
+            // 
+            // alamatDataGridViewTextBoxColumn
+            // 
+            this.alamatDataGridViewTextBoxColumn.DataPropertyName = "Alamat";
+            this.alamatDataGridViewTextBoxColumn.HeaderText = "Alamat";
+            this.alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
+            // 
+            // noTeleponDataGridViewTextBoxColumn
+            // 
+            this.noTeleponDataGridViewTextBoxColumn.DataPropertyName = "No_Telepon";
+            this.noTeleponDataGridViewTextBoxColumn.HeaderText = "No_Telepon";
+            this.noTeleponDataGridViewTextBoxColumn.Name = "noTeleponDataGridViewTextBoxColumn";
+            // 
+            // supplierBindingSource
+            // 
+            this.supplierBindingSource.DataMember = "Supplier";
+            this.supplierBindingSource.DataSource = this.tokoSakuraDataSet;
+            // 
+            // tokoSakuraDataSet
+            // 
+            this.tokoSakuraDataSet.DataSetName = "TokoSakuraDataSet";
+            this.tokoSakuraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label5
             // 
@@ -134,7 +168,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 20);
             this.label1.TabIndex = 70;
-            this.label1.Text = "ID Member";
+            this.label1.Text = "ID Supplier";
             // 
             // txtNama
             // 
@@ -228,43 +262,9 @@
             this.epWarning.ContainerControl = this;
             this.epWarning.Icon = ((System.Drawing.Icon)(resources.GetObject("epWarning.Icon")));
             // 
-            // tokoSakuraDataSet
-            // 
-            this.tokoSakuraDataSet.DataSetName = "TokoSakuraDataSet";
-            this.tokoSakuraDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // supplierBindingSource
-            // 
-            this.supplierBindingSource.DataMember = "Supplier";
-            this.supplierBindingSource.DataSource = this.tokoSakuraDataSet;
-            // 
             // supplierTableAdapter
             // 
             this.supplierTableAdapter.ClearBeforeFill = true;
-            // 
-            // kodeSupplierDataGridViewTextBoxColumn
-            // 
-            this.kodeSupplierDataGridViewTextBoxColumn.DataPropertyName = "Kode_Supplier";
-            this.kodeSupplierDataGridViewTextBoxColumn.HeaderText = "Kode_Supplier";
-            this.kodeSupplierDataGridViewTextBoxColumn.Name = "kodeSupplierDataGridViewTextBoxColumn";
-            // 
-            // namaSupplierDataGridViewTextBoxColumn
-            // 
-            this.namaSupplierDataGridViewTextBoxColumn.DataPropertyName = "Nama_Supplier";
-            this.namaSupplierDataGridViewTextBoxColumn.HeaderText = "Nama_Supplier";
-            this.namaSupplierDataGridViewTextBoxColumn.Name = "namaSupplierDataGridViewTextBoxColumn";
-            // 
-            // alamatDataGridViewTextBoxColumn
-            // 
-            this.alamatDataGridViewTextBoxColumn.DataPropertyName = "Alamat";
-            this.alamatDataGridViewTextBoxColumn.HeaderText = "Alamat";
-            this.alamatDataGridViewTextBoxColumn.Name = "alamatDataGridViewTextBoxColumn";
-            // 
-            // noTeleponDataGridViewTextBoxColumn
-            // 
-            this.noTeleponDataGridViewTextBoxColumn.DataPropertyName = "No_Telepon";
-            this.noTeleponDataGridViewTextBoxColumn.HeaderText = "No_Telepon";
-            this.noTeleponDataGridViewTextBoxColumn.Name = "noTeleponDataGridViewTextBoxColumn";
             // 
             // KelolaSupplier
             // 
@@ -292,10 +292,10 @@
             this.Text = "Kelola Supplier";
             this.Load += new System.EventHandler(this.KelolaSupplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tokoSakuraDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epWrong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epWarning)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tokoSakuraDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.supplierBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
