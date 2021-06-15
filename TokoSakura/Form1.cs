@@ -16,5 +16,11 @@ namespace TokoSakura
         {
             InitializeComponent();
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+        }
     }
 }
