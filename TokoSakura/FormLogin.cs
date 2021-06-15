@@ -15,9 +15,22 @@ namespace TokoSakura
         public FormLogin()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormMenu formMenu = new FormMenu();
+            formMenu.Show();
+            this.Hide();
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
         {
 
         }

@@ -38,7 +38,7 @@
             this.btnMenu.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.IndianRed;
             this.btnMenu.Location = new System.Drawing.Point(443, 393);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(211, 42);
             this.btnMenu.TabIndex = 1;
@@ -55,9 +55,14 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnMenu);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form Main Menu";
+            this.Load += new System.EventHandler(this.FormMenu_Load);
             this.ResumeLayout(false);
 
         }

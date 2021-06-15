@@ -21,6 +21,12 @@ namespace TokoSakura
         {
             FormLogin formLogin = new FormLogin();
             formLogin.Show();
+            this.Hide();
+        }
+
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
