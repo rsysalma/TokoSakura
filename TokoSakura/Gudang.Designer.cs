@@ -41,7 +41,7 @@
             this.btnSupplier.BackColor = System.Drawing.Color.MistyRose;
             this.btnSupplier.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupplier.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnSupplier.Location = new System.Drawing.Point(564, 324);
+            this.btnSupplier.Location = new System.Drawing.Point(574, 320);
             this.btnSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Size = new System.Drawing.Size(307, 52);
@@ -55,7 +55,7 @@
             this.btnPembelian.BackColor = System.Drawing.Color.MistyRose;
             this.btnPembelian.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPembelian.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnPembelian.Location = new System.Drawing.Point(564, 223);
+            this.btnPembelian.Location = new System.Drawing.Point(574, 219);
             this.btnPembelian.Margin = new System.Windows.Forms.Padding(4);
             this.btnPembelian.Name = "btnPembelian";
             this.btnPembelian.Size = new System.Drawing.Size(307, 52);
@@ -69,7 +69,7 @@
             this.btnJenisBarang.BackColor = System.Drawing.Color.MistyRose;
             this.btnJenisBarang.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJenisBarang.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnJenisBarang.Location = new System.Drawing.Point(181, 324);
+            this.btnJenisBarang.Location = new System.Drawing.Point(191, 320);
             this.btnJenisBarang.Margin = new System.Windows.Forms.Padding(4);
             this.btnJenisBarang.Name = "btnJenisBarang";
             this.btnJenisBarang.Size = new System.Drawing.Size(307, 52);
@@ -83,7 +83,7 @@
             this.btnBarang.BackColor = System.Drawing.Color.MistyRose;
             this.btnBarang.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBarang.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnBarang.Location = new System.Drawing.Point(181, 223);
+            this.btnBarang.Location = new System.Drawing.Point(191, 219);
             this.btnBarang.Margin = new System.Windows.Forms.Padding(4);
             this.btnBarang.Name = "btnBarang";
             this.btnBarang.Size = new System.Drawing.Size(307, 52);
@@ -97,7 +97,7 @@
             this.btnLogout.BackColor = System.Drawing.Color.MistyRose;
             this.btnLogout.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnLogout.Location = new System.Drawing.Point(353, 469);
+            this.btnLogout.Location = new System.Drawing.Point(364, 473);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(307, 52);
@@ -112,7 +112,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1072, 553);
             this.ControlBox = false;
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnPembelian);

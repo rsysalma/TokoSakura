@@ -26,26 +26,25 @@ namespace TokoSakura
         {
             InitializeComponent();
             string query = "SELECT TOP 1 Kode_Barang FROM Barang ORDER BY Kode_Barang DESC";
-
             txtID.Text = autogenerateID("BRG", query);
             txtID.Enabled = false;
         }
 
         private void KelolaBarang_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tokoSakuraDataSet1.Supplier' table. You can move, or remove it, as needed.
+            // sekar
             this.supplierTableAdapter1.Fill(this.tokoSakuraDataSet1.Supplier);
-            // TODO: This line of code loads data into the 'tokoSakuraDataSet1.JenisBarang' table. You can move, or remove it, as needed.
             this.jenisBarangTableAdapter1.Fill(this.tokoSakuraDataSet1.JenisBarang);
-            //sekar
             this.barangTableAdapter1.Fill(this.tokoSakuraDataSet1.Barang);
             // salma
             //this.barangTableAdapter.Fill(this.tokoSakuraDataSet.Barang);
             //this.supplierTableAdapter.Fill(this.tokoSakuraDataSet.Supplier);
             //this.jenisBarangTableAdapter.Fill(this.tokoSakuraDataSet.JenisBarang);
-            // sekar
 
-
+            clear();
+            btnCari.Enabled = false;
+            btnUbah.Enabled = false;
+            btnHapus.Enabled = false;
         }
 
         public string autogenerateID(string firstText, string query)
@@ -76,7 +75,6 @@ namespace TokoSakura
             {
                 MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             result = firstText + num.ToString().PadLeft(2, '0');
             return result;
         }
@@ -88,12 +86,11 @@ namespace TokoSakura
             txtDeskripsi.Clear();
             txtHarga.Clear();
             txtJumlah.Clear();
-
-
             string query = "SELECT TOP 1 Kode_Barang FROM Barang ORDER BY Kode_Barang DESC";
-
             txtID.Text = autogenerateID("BRG", query);
             txtID.Enabled = false;
+            cbSupplier.SelectedValue = -1;
+            cbJenis.SelectedValue = -1;
         }
 
         private void txtNama_KeyPress(object sender, KeyPressEventArgs e)
@@ -220,7 +217,13 @@ namespace TokoSakura
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            clear();
+            txtID.Text = "";
+            txtID.Enabled = true;
+            btnSimpan.Enabled = false;
+            btnCari.Enabled = true;
+            btnUbah.Enabled = true;
+            btnHapus.Enabled = true;
         }
 
         private void btnSimpan_Click_1(object sender, EventArgs e)
@@ -275,11 +278,16 @@ namespace TokoSakura
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
                 txtNama.Text = dt.Rows[0]["Nama_Barang"].ToString();
-                cbJenis.Text = dt.Rows[0]["Kode_Jenis_Barang"].ToString();
-                cbSupplier.Text = dt.Rows[0]["Kode_Supplier"].ToString();
+                cbJenis.SelectedValue = dt.Rows[0]["Kode_Jenis_Barang"].ToString();
+                cbSupplier.SelectedValue = dt.Rows[0]["Kode_Supplier"].ToString();
                 txtJumlah.Text = dt.Rows[0]["Jumlah"].ToString();
                 txtHarga.Text = dt.Rows[0]["Harga"].ToString();
                 txtDeskripsi.Text = dt.Rows[0]["Deskripsi"].ToString();
+                txtID.Enabled = false;
+                txtNama.Enabled = false;
+                cbJenis.Enabled = false;
+                cbSupplier.Enabled = false;
+                btnCari.Enabled = false;
                 con.Close();
             }
             catch
@@ -304,9 +312,6 @@ namespace TokoSakura
                 SqlCommand update = new SqlCommand("sp_UpdateBarang", connection);
                 update.CommandType = CommandType.StoredProcedure;
                 update.Parameters.AddWithValue("Kode_Barang", txtID.Text);
-                update.Parameters.AddWithValue("Nama_Barang", txtNama.Text);
-                update.Parameters.AddWithValue("Kode_Jenis_Barang", cbJenis.Text);
-                update.Parameters.AddWithValue("Kode_Supplier", cbSupplier.Text);
                 update.Parameters.AddWithValue("Jumlah", txtJumlah.Text);
                 update.Parameters.AddWithValue("Harga", txtHarga.Text);
                 update.Parameters.AddWithValue("Deskripsi", txtDeskripsi.Text);
@@ -316,6 +321,12 @@ namespace TokoSakura
                     update.ExecuteNonQuery();
                     MessageBox.Show("Data berhasil diupdate", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
+                    btnSimpan.Enabled = true;
+                    btnUbah.Enabled = false;
+                    btnHapus.Enabled = false;
+                    txtNama.Enabled = true;
+                    cbJenis.Enabled = true;
+                    cbSupplier.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -344,6 +355,9 @@ namespace TokoSakura
                     delete.ExecuteNonQuery();
                     MessageBox.Show("Data berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
+                    btnSimpan.Enabled = true;
+                    btnUbah.Enabled = false;
+                    btnHapus.Enabled = false;
                 }
                 catch (Exception ex)
                 {

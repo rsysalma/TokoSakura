@@ -76,11 +76,11 @@
             this.alamatDataGridViewTextBoxColumn,
             this.noTeleponDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.supplierBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(57, 113);
+            this.dataGridView1.Location = new System.Drawing.Point(41, 124);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(465, 354);
+            this.dataGridView1.Size = new System.Drawing.Size(465, 343);
             this.dataGridView1.TabIndex = 5;
             // 
             // kodeSupplierDataGridViewTextBoxColumn
@@ -315,7 +315,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1072, 553);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnUbah);

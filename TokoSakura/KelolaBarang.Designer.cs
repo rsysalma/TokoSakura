@@ -188,7 +188,7 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(775, 127);
+            this.txtID.Location = new System.Drawing.Point(785, 127);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(191, 30);
@@ -198,7 +198,7 @@
             // txtNama
             // 
             this.txtNama.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNama.Location = new System.Drawing.Point(775, 160);
+            this.txtNama.Location = new System.Drawing.Point(785, 160);
             this.txtNama.Margin = new System.Windows.Forms.Padding(4);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(249, 30);
@@ -209,7 +209,7 @@
             // txtJumlah
             // 
             this.txtJumlah.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJumlah.Location = new System.Drawing.Point(775, 261);
+            this.txtJumlah.Location = new System.Drawing.Point(785, 261);
             this.txtJumlah.Margin = new System.Windows.Forms.Padding(4);
             this.txtJumlah.Name = "txtJumlah";
             this.txtJumlah.Size = new System.Drawing.Size(249, 30);
@@ -220,7 +220,7 @@
             // txtHarga
             // 
             this.txtHarga.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHarga.Location = new System.Drawing.Point(775, 294);
+            this.txtHarga.Location = new System.Drawing.Point(785, 294);
             this.txtHarga.Margin = new System.Windows.Forms.Padding(4);
             this.txtHarga.Name = "txtHarga";
             this.txtHarga.Size = new System.Drawing.Size(249, 30);
@@ -233,7 +233,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(563, 130);
+            this.label1.Location = new System.Drawing.Point(573, 130);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 25);
@@ -245,7 +245,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(563, 264);
+            this.label2.Location = new System.Drawing.Point(573, 264);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 25);
@@ -257,7 +257,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(563, 163);
+            this.label3.Location = new System.Drawing.Point(573, 163);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 25);
@@ -269,7 +269,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(563, 297);
+            this.label4.Location = new System.Drawing.Point(573, 297);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 25);
@@ -279,7 +279,7 @@
             // txtDeskripsi
             // 
             this.txtDeskripsi.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDeskripsi.Location = new System.Drawing.Point(775, 327);
+            this.txtDeskripsi.Location = new System.Drawing.Point(785, 327);
             this.txtDeskripsi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDeskripsi.Multiline = true;
             this.txtDeskripsi.Name = "txtDeskripsi";
@@ -292,7 +292,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(563, 330);
+            this.label6.Location = new System.Drawing.Point(573, 330);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(151, 25);
@@ -304,7 +304,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(563, 196);
+            this.label7.Location = new System.Drawing.Point(573, 196);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(176, 25);
@@ -317,7 +317,7 @@
             this.cbJenis.DisplayMember = "Nama_Jenis_Barang";
             this.cbJenis.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbJenis.FormattingEnabled = true;
-            this.cbJenis.Location = new System.Drawing.Point(775, 193);
+            this.cbJenis.Location = new System.Drawing.Point(785, 193);
             this.cbJenis.Margin = new System.Windows.Forms.Padding(4);
             this.cbJenis.Name = "cbJenis";
             this.cbJenis.Size = new System.Drawing.Size(249, 31);
@@ -340,7 +340,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label8.Location = new System.Drawing.Point(563, 230);
+            this.label8.Location = new System.Drawing.Point(573, 230);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(151, 25);
@@ -353,7 +353,7 @@
             this.cbSupplier.DisplayMember = "Nama_Supplier";
             this.cbSupplier.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSupplier.FormattingEnabled = true;
-            this.cbSupplier.Location = new System.Drawing.Point(775, 227);
+            this.cbSupplier.Location = new System.Drawing.Point(785, 227);
             this.cbSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.cbSupplier.Name = "cbSupplier";
             this.cbSupplier.Size = new System.Drawing.Size(249, 31);
@@ -398,7 +398,7 @@
             this.btnHapus.BackColor = System.Drawing.Color.MistyRose;
             this.btnHapus.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnHapus.Location = new System.Drawing.Point(914, 415);
+            this.btnHapus.Location = new System.Drawing.Point(924, 415);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(4);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(110, 40);
@@ -412,7 +412,7 @@
             this.btnUbah.BackColor = System.Drawing.Color.MistyRose;
             this.btnUbah.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUbah.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnUbah.Location = new System.Drawing.Point(797, 415);
+            this.btnUbah.Location = new System.Drawing.Point(807, 415);
             this.btnUbah.Margin = new System.Windows.Forms.Padding(4);
             this.btnUbah.Name = "btnUbah";
             this.btnUbah.Size = new System.Drawing.Size(110, 40);
@@ -426,7 +426,7 @@
             this.btnSimpan.BackColor = System.Drawing.Color.MistyRose;
             this.btnSimpan.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimpan.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnSimpan.Location = new System.Drawing.Point(567, 415);
+            this.btnSimpan.Location = new System.Drawing.Point(577, 415);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(4);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(110, 40);
@@ -440,7 +440,7 @@
             this.btnCari.BackColor = System.Drawing.Color.MistyRose;
             this.btnCari.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCari.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.btnCari.Location = new System.Drawing.Point(682, 415);
+            this.btnCari.Location = new System.Drawing.Point(692, 415);
             this.btnCari.Margin = new System.Windows.Forms.Padding(4);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(110, 40);
@@ -458,7 +458,7 @@
             this.button1.BackColor = System.Drawing.Color.MistyRose;
             this.button1.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(974, 127);
+            this.button1.Location = new System.Drawing.Point(984, 127);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 30);
@@ -486,7 +486,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1072, 553);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnUbah);

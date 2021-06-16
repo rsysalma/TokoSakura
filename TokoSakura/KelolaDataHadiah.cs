@@ -13,18 +13,26 @@ namespace TokoSakura
 {
     public partial class KelolaDataHadiah : Form
     {
+        public string GetConnectionDB()
+        {
+            // sekar
+            string ConnectionString = @"Integrated Security=true; Data Source=LAPTOP-2F1SV60V\MSSQLSERVER01; Initial Catalog=TokoSakura";
+            // salma
+            //string connectionString = "integrated security = true; data source =.; initial catalog = TokoSakura";
+            return ConnectionString;
+        }
+
         public KelolaDataHadiah()
         {
             InitializeComponent();
             string query = "SELECT TOP 1 Kode_Hadiah FROM Hadiah ORDER BY Kode_Hadiah DESC";
-
             txtID.Text = autogenerateID("HDH", query);
             txtID.Enabled = false;
         }
 
         public string autogenerateID(string firstText, string query)
         {
-            string connectionString = "integrated security = true; data source =.; initial catalog = TokoSakura";
+            string connectionString = GetConnectionDB();
             SqlCommand sqlCmd;
             SqlConnection sqlCon;
             string result = "";
@@ -50,7 +58,6 @@ namespace TokoSakura
             {
                 MessageBox.Show(ex.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             result = firstText + num.ToString().PadLeft(2, '0');
             return result;
         }
@@ -61,9 +68,7 @@ namespace TokoSakura
             txtID.Clear();
             txtJumlah.Clear();
             txtPoin.Clear();
-
             string query = "SELECT TOP 1 Kode_Hadiah FROM Hadiah ORDER BY Kode_Hadiah DESC";
-
             txtID.Text = autogenerateID("HDH", query);
             txtID.Enabled = false;
         }
@@ -122,8 +127,12 @@ namespace TokoSakura
 
         private void KelolaDataHadiah_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tokoSakuraDataSet.Hadiah' table. You can move, or remove it, as needed.
-            this.hadiahTableAdapter.Fill(this.tokoSakuraDataSet.Hadiah);
+            btnCari.Enabled = false;
+            btnUbah.Enabled = false;
+            btnHapus.Enabled = false;
+            this.hadiahTableAdapter1.Fill(this.tokoSakuraDataSet1.Hadiah);
+            //salma
+            //this.hadiahTableAdapter.Fill(this.tokoSakuraDataSet.Hadiah);
 
         }
 
@@ -155,7 +164,7 @@ namespace TokoSakura
             }
         }
 
-        private void btnSimpan_Click(object sender, EventArgs e)
+        private void btnSimpan_Click_1(object sender, EventArgs e)
         {
             if (txtID.Text == "" || txtNama.Text == "" || txtJumlah.Text == "" || txtPoin.Text == "")
             {
@@ -164,8 +173,7 @@ namespace TokoSakura
             }
             else
             {
-                string connectionstring =
-             "integrated security=true; data source=.; initial catalog=TokoSakura";
+                string connectionstring = GetConnectionDB();
                 SqlConnection connection = new SqlConnection(connectionstring);
 
                 SqlCommand insert = new SqlCommand("sp_InputHadiah", connection);
@@ -189,12 +197,11 @@ namespace TokoSakura
             }
         }
 
-        private void btnCari_Click(object sender, EventArgs e)
+        private void btnCari_Click_1(object sender, EventArgs e)
         {
             try
             {
-
-                string connectionString = "integrated security = true; data source =.; initial catalog = TokoSakura";
+                string connectionString = GetConnectionDB();
                 SqlConnection con = new SqlConnection(connectionString);
                 con.Open();
                 DataTable dt = new DataTable();
@@ -208,29 +215,21 @@ namespace TokoSakura
                 txtNama.Text = dt.Rows[0]["Nama"].ToString();
                 txtJumlah.Text = dt.Rows[0]["Jumlah"].ToString();
                 txtPoin.Text = dt.Rows[0]["Poin"].ToString();
-
-                txtID.ReadOnly = true;
-                txtNama.Enabled = true;
+                txtID.Enabled = false;
+                txtNama.Enabled = false;
                 txtJumlah.Enabled = true;
                 txtPoin.Enabled = true;
+                btnCari.Enabled = false;
                 con.Close();
             }
             catch
             {
-
                 MessageBox.Show
                   ("Data Tidak Ditemukan!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
         }
 
-        private void btnbatal_Click(object sender, EventArgs e)
-        {
-            clear();
-            txtID.Enabled = true;
-        }
-
-        private void btnUbah_Click(object sender, EventArgs e)
+        private void btnUbah_Click_1(object sender, EventArgs e)
         {
             if (txtID.Text == "" || txtNama.Text == "" || txtJumlah.Text == "" || txtPoin.Text == "")
             {
@@ -239,23 +238,23 @@ namespace TokoSakura
             }
             else
             {
-                string connectionstring =
-             "integrated security=true; data source=.; initial catalog=TokoSakura";
+                string connectionstring = GetConnectionDB();
                 SqlConnection connection = new SqlConnection(connectionstring);
-
                 SqlCommand update = new SqlCommand("sp_UpdateHadiah", connection);
                 update.CommandType = CommandType.StoredProcedure;
                 update.Parameters.AddWithValue("Kode_Hadiah", txtID.Text);
-                update.Parameters.AddWithValue("Nama", txtNama.Text);
                 update.Parameters.AddWithValue("Jumlah", txtJumlah.Text);
                 update.Parameters.AddWithValue("Poin", txtPoin.Text);
-
                 try
                 {
                     connection.Open();
                     update.ExecuteNonQuery();
                     MessageBox.Show("Data updated succesfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
+                    btnSimpan.Enabled = true;
+                    btnUbah.Enabled = false;
+                    btnHapus.Enabled = false;
+                    txtNama.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -264,7 +263,7 @@ namespace TokoSakura
             }
         }
 
-        private void btnHapus_Click(object sender, EventArgs e)
+        private void btnHapus_Click_1(object sender, EventArgs e)
         {
             if (txtID.Text == "" || txtNama.Text == "" || txtJumlah.Text == "" || txtPoin.Text == "")
             {
@@ -273,27 +272,38 @@ namespace TokoSakura
             }
             else
             {
-                string connectionstring =
-             "integrated security=true; data source=.; initial catalog=TokoSakura";
+                string connectionstring = GetConnectionDB();
                 SqlConnection connection = new SqlConnection(connectionstring);
-
                 SqlCommand delete = new SqlCommand("sp_DeleteHadiah", connection);
                 delete.CommandType = CommandType.StoredProcedure;
                 delete.Parameters.AddWithValue("Kode_Hadiah", txtID.Text);
-
-
                 try
                 {
                     connection.Open();
                     delete.ExecuteNonQuery();
                     MessageBox.Show("Data deleted succesfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
+                    btnSimpan.Enabled = true;
+                    btnUbah.Enabled = false;
+                    btnHapus.Enabled = false;
+                    txtNama.Enabled = true;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Unable to deleted: " + ex.Message);
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clear();
+            txtID.Text = "";
+            txtID.Enabled = true;
+            btnSimpan.Enabled = false;
+            btnCari.Enabled = true;
+            btnUbah.Enabled = true;
+            btnHapus.Enabled = true;
         }
     }
 }

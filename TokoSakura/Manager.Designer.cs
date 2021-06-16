@@ -43,7 +43,7 @@
             this.btnLaporanPenjualan.BackColor = System.Drawing.Color.MistyRose;
             this.btnLaporanPenjualan.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLaporanPenjualan.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnLaporanPenjualan.Location = new System.Drawing.Point(131, 204);
+            this.btnLaporanPenjualan.Location = new System.Drawing.Point(143, 204);
             this.btnLaporanPenjualan.Margin = new System.Windows.Forms.Padding(4);
             this.btnLaporanPenjualan.Name = "btnLaporanPenjualan";
             this.btnLaporanPenjualan.Size = new System.Drawing.Size(332, 52);
@@ -57,7 +57,7 @@
             this.button1.BackColor = System.Drawing.Color.MistyRose;
             this.button1.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.IndianRed;
-            this.button1.Location = new System.Drawing.Point(555, 204);
+            this.button1.Location = new System.Drawing.Point(567, 204);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(363, 52);
@@ -71,7 +71,7 @@
             this.btnKaryawan.BackColor = System.Drawing.Color.MistyRose;
             this.btnKaryawan.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKaryawan.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnKaryawan.Location = new System.Drawing.Point(131, 279);
+            this.btnKaryawan.Location = new System.Drawing.Point(143, 279);
             this.btnKaryawan.Margin = new System.Windows.Forms.Padding(4);
             this.btnKaryawan.Name = "btnKaryawan";
             this.btnKaryawan.Size = new System.Drawing.Size(332, 52);
@@ -85,7 +85,7 @@
             this.btnGolKaryawan.BackColor = System.Drawing.Color.MistyRose;
             this.btnGolKaryawan.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGolKaryawan.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnGolKaryawan.Location = new System.Drawing.Point(131, 359);
+            this.btnGolKaryawan.Location = new System.Drawing.Point(143, 359);
             this.btnGolKaryawan.Margin = new System.Windows.Forms.Padding(4);
             this.btnGolKaryawan.Name = "btnGolKaryawan";
             this.btnGolKaryawan.Size = new System.Drawing.Size(332, 52);
@@ -99,7 +99,7 @@
             this.button2.BackColor = System.Drawing.Color.MistyRose;
             this.button2.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.IndianRed;
-            this.button2.Location = new System.Drawing.Point(555, 279);
+            this.button2.Location = new System.Drawing.Point(567, 279);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(363, 52);
@@ -113,7 +113,7 @@
             this.button3.BackColor = System.Drawing.Color.MistyRose;
             this.button3.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.IndianRed;
-            this.button3.Location = new System.Drawing.Point(555, 359);
+            this.button3.Location = new System.Drawing.Point(567, 359);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(363, 52);
@@ -127,7 +127,7 @@
             this.btnLogout.BackColor = System.Drawing.Color.MistyRose;
             this.btnLogout.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnLogout.Location = new System.Drawing.Point(349, 476);
+            this.btnLogout.Location = new System.Drawing.Point(361, 476);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(307, 52);
@@ -142,7 +142,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1072, 553);
             this.ControlBox = false;
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.button3);

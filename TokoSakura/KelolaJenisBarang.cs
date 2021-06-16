@@ -219,6 +219,7 @@ namespace TokoSakura
                     clear();
                     btnUbah.Enabled = false;
                     btnHapus.Enabled = false;
+                    btnSimpan.Enabled = true;
                 }
                 catch (Exception ex)
                 {
@@ -250,6 +251,7 @@ namespace TokoSakura
                     clear();
                     btnUbah.Enabled = false;
                     btnHapus.Enabled = false;
+                    btnSimpan.Enabled = true;
                 }
                 catch (Exception ex)
                 {

@@ -43,7 +43,7 @@
             this.btnMember.BackColor = System.Drawing.Color.MistyRose;
             this.btnMember.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMember.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnMember.Location = new System.Drawing.Point(165, 213);
+            this.btnMember.Location = new System.Drawing.Point(191, 213);
             this.btnMember.Margin = new System.Windows.Forms.Padding(4);
             this.btnMember.Name = "btnMember";
             this.btnMember.Size = new System.Drawing.Size(295, 52);
@@ -57,7 +57,7 @@
             this.btnGolMember.BackColor = System.Drawing.Color.MistyRose;
             this.btnGolMember.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGolMember.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnGolMember.Location = new System.Drawing.Point(165, 288);
+            this.btnGolMember.Location = new System.Drawing.Point(191, 288);
             this.btnGolMember.Margin = new System.Windows.Forms.Padding(4);
             this.btnGolMember.Name = "btnGolMember";
             this.btnGolMember.Size = new System.Drawing.Size(295, 54);
@@ -71,7 +71,7 @@
             this.btnDataHadiah.BackColor = System.Drawing.Color.MistyRose;
             this.btnDataHadiah.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDataHadiah.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnDataHadiah.Location = new System.Drawing.Point(165, 368);
+            this.btnDataHadiah.Location = new System.Drawing.Point(191, 368);
             this.btnDataHadiah.Margin = new System.Windows.Forms.Padding(4);
             this.btnDataHadiah.Name = "btnDataHadiah";
             this.btnDataHadiah.Size = new System.Drawing.Size(295, 54);
@@ -85,7 +85,7 @@
             this.btnPenjualan.BackColor = System.Drawing.Color.MistyRose;
             this.btnPenjualan.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPenjualan.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnPenjualan.Location = new System.Drawing.Point(561, 213);
+            this.btnPenjualan.Location = new System.Drawing.Point(587, 213);
             this.btnPenjualan.Margin = new System.Windows.Forms.Padding(4);
             this.btnPenjualan.Name = "btnPenjualan";
             this.btnPenjualan.Size = new System.Drawing.Size(295, 52);
@@ -99,7 +99,7 @@
             this.btnBuatMember.BackColor = System.Drawing.Color.MistyRose;
             this.btnBuatMember.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuatMember.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnBuatMember.Location = new System.Drawing.Point(561, 290);
+            this.btnBuatMember.Location = new System.Drawing.Point(587, 290);
             this.btnBuatMember.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuatMember.Name = "btnBuatMember";
             this.btnBuatMember.Size = new System.Drawing.Size(295, 52);
@@ -113,7 +113,7 @@
             this.btnTukarHadiah.BackColor = System.Drawing.Color.MistyRose;
             this.btnTukarHadiah.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTukarHadiah.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnTukarHadiah.Location = new System.Drawing.Point(561, 368);
+            this.btnTukarHadiah.Location = new System.Drawing.Point(587, 368);
             this.btnTukarHadiah.Margin = new System.Windows.Forms.Padding(4);
             this.btnTukarHadiah.Name = "btnTukarHadiah";
             this.btnTukarHadiah.Size = new System.Drawing.Size(295, 52);
@@ -127,7 +127,7 @@
             this.btnLogout.BackColor = System.Drawing.Color.MistyRose;
             this.btnLogout.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnLogout.Location = new System.Drawing.Point(355, 472);
+            this.btnLogout.Location = new System.Drawing.Point(381, 472);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(307, 52);
@@ -142,7 +142,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1072, 553);
             this.ControlBox = false;
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnTukarHadiah);
