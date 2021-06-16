@@ -32,5 +32,16 @@ namespace TokoSakura.Properties {
                 return ((string)(this["TokoSakuraConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-2F1SV60V\\MSSQLSERVER01;Initial Catalog=TokoSakura;Integrated S" +
+            "ecurity=True")]
+        public string TokoSakuraConnectionString1 {
+            get {
+                return ((string)(this["TokoSakuraConnectionString1"]));
+            }
+        }
     }
 }

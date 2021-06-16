@@ -33,6 +33,7 @@
             this.btnPembelian = new System.Windows.Forms.Button();
             this.btnJenisBarang = new System.Windows.Forms.Button();
             this.btnBarang = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSupplier
@@ -40,62 +41,89 @@
             this.btnSupplier.BackColor = System.Drawing.Color.MistyRose;
             this.btnSupplier.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSupplier.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnSupplier.Location = new System.Drawing.Point(423, 263);
+            this.btnSupplier.Location = new System.Drawing.Point(564, 324);
+            this.btnSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.btnSupplier.Name = "btnSupplier";
-            this.btnSupplier.Size = new System.Drawing.Size(230, 42);
+            this.btnSupplier.Size = new System.Drawing.Size(307, 52);
             this.btnSupplier.TabIndex = 5;
             this.btnSupplier.Text = "Kelola Supplier";
             this.btnSupplier.UseVisualStyleBackColor = false;
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
             // 
             // btnPembelian
             // 
             this.btnPembelian.BackColor = System.Drawing.Color.MistyRose;
             this.btnPembelian.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPembelian.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnPembelian.Location = new System.Drawing.Point(423, 181);
+            this.btnPembelian.Location = new System.Drawing.Point(564, 223);
+            this.btnPembelian.Margin = new System.Windows.Forms.Padding(4);
             this.btnPembelian.Name = "btnPembelian";
-            this.btnPembelian.Size = new System.Drawing.Size(230, 42);
+            this.btnPembelian.Size = new System.Drawing.Size(307, 52);
             this.btnPembelian.TabIndex = 6;
             this.btnPembelian.Text = "Pembelian Barang";
             this.btnPembelian.UseVisualStyleBackColor = false;
+            this.btnPembelian.Click += new System.EventHandler(this.btnPembelian_Click);
             // 
             // btnJenisBarang
             // 
             this.btnJenisBarang.BackColor = System.Drawing.Color.MistyRose;
             this.btnJenisBarang.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJenisBarang.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnJenisBarang.Location = new System.Drawing.Point(136, 263);
+            this.btnJenisBarang.Location = new System.Drawing.Point(181, 324);
+            this.btnJenisBarang.Margin = new System.Windows.Forms.Padding(4);
             this.btnJenisBarang.Name = "btnJenisBarang";
-            this.btnJenisBarang.Size = new System.Drawing.Size(230, 42);
+            this.btnJenisBarang.Size = new System.Drawing.Size(307, 52);
             this.btnJenisBarang.TabIndex = 4;
             this.btnJenisBarang.Text = "Kelola Jenis Barang";
             this.btnJenisBarang.UseVisualStyleBackColor = false;
+            this.btnJenisBarang.Click += new System.EventHandler(this.btnJenisBarang_Click);
             // 
             // btnBarang
             // 
             this.btnBarang.BackColor = System.Drawing.Color.MistyRose;
             this.btnBarang.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBarang.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnBarang.Location = new System.Drawing.Point(136, 181);
+            this.btnBarang.Location = new System.Drawing.Point(181, 223);
+            this.btnBarang.Margin = new System.Windows.Forms.Padding(4);
             this.btnBarang.Name = "btnBarang";
-            this.btnBarang.Size = new System.Drawing.Size(230, 42);
+            this.btnBarang.Size = new System.Drawing.Size(307, 52);
             this.btnBarang.TabIndex = 3;
             this.btnBarang.Text = "Kelola Barang";
             this.btnBarang.UseVisualStyleBackColor = false;
+            this.btnBarang.Click += new System.EventHandler(this.btnBarang_Click);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.MistyRose;
+            this.btnLogout.Font = new System.Drawing.Font("Cooper Black", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.IndianRed;
+            this.btnLogout.Location = new System.Drawing.Point(353, 469);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(307, 52);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "LOGOUT";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // Gudang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnPembelian);
             this.Controls.Add(this.btnSupplier);
             this.Controls.Add(this.btnJenisBarang);
             this.Controls.Add(this.btnBarang);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Gudang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Staff Gudang";
             this.ResumeLayout(false);
 
@@ -107,5 +135,6 @@
         private System.Windows.Forms.Button btnPembelian;
         private System.Windows.Forms.Button btnJenisBarang;
         private System.Windows.Forms.Button btnBarang;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

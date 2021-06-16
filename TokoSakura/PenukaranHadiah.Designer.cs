@@ -41,17 +41,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(261, 120);
+            this.textBox1.Location = new System.Drawing.Point(348, 148);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 20);
+            this.textBox1.Size = new System.Drawing.Size(249, 22);
             this.textBox1.TabIndex = 83;
             // 
             // cbGolongan
             // 
             this.cbGolongan.FormattingEnabled = true;
-            this.cbGolongan.Location = new System.Drawing.Point(261, 197);
+            this.cbGolongan.Location = new System.Drawing.Point(348, 242);
+            this.cbGolongan.Margin = new System.Windows.Forms.Padding(4);
             this.cbGolongan.Name = "cbGolongan";
-            this.cbGolongan.Size = new System.Drawing.Size(188, 21);
+            this.cbGolongan.Size = new System.Drawing.Size(249, 24);
             this.cbGolongan.TabIndex = 82;
             // 
             // label3
@@ -59,9 +61,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(127, 155);
+            this.label3.Location = new System.Drawing.Point(169, 191);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 20);
+            this.label3.Size = new System.Drawing.Size(137, 25);
             this.label3.TabIndex = 79;
             this.label3.Text = "Nama Member";
             // 
@@ -70,9 +73,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(127, 198);
+            this.label2.Location = new System.Drawing.Point(169, 244);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 20);
+            this.label2.Size = new System.Drawing.Size(137, 25);
             this.label2.TabIndex = 78;
             this.label2.Text = "Nama Hadiah";
             // 
@@ -81,9 +85,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Impact", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(127, 118);
+            this.label1.Location = new System.Drawing.Point(169, 145);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.Size = new System.Drawing.Size(127, 25);
             this.label1.TabIndex = 77;
             this.label1.Text = "ID Tukar";
             // 
@@ -92,9 +97,10 @@
             this.btnbatal.BackColor = System.Drawing.Color.MistyRose;
             this.btnbatal.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnbatal.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnbatal.Location = new System.Drawing.Point(482, 175);
+            this.btnbatal.Location = new System.Drawing.Point(643, 215);
+            this.btnbatal.Margin = new System.Windows.Forms.Padding(4);
             this.btnbatal.Name = "btnbatal";
-            this.btnbatal.Size = new System.Drawing.Size(85, 27);
+            this.btnbatal.Size = new System.Drawing.Size(113, 33);
             this.btnbatal.TabIndex = 85;
             this.btnbatal.Text = "Batal";
             this.btnbatal.UseVisualStyleBackColor = false;
@@ -104,9 +110,10 @@
             this.btnPesan.BackColor = System.Drawing.Color.MistyRose;
             this.btnPesan.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesan.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnPesan.Location = new System.Drawing.Point(482, 142);
+            this.btnPesan.Location = new System.Drawing.Point(643, 175);
+            this.btnPesan.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesan.Name = "btnPesan";
-            this.btnPesan.Size = new System.Drawing.Size(85, 27);
+            this.btnPesan.Size = new System.Drawing.Size(113, 33);
             this.btnPesan.TabIndex = 84;
             this.btnPesan.Text = "Tukar";
             this.btnPesan.UseVisualStyleBackColor = false;
@@ -114,18 +121,19 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(261, 157);
+            this.comboBox1.Location = new System.Drawing.Point(348, 193);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(188, 21);
+            this.comboBox1.Size = new System.Drawing.Size(249, 24);
             this.comboBox1.TabIndex = 86;
             // 
             // PenukaranHadiah
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(713, 360);
+            this.ClientSize = new System.Drawing.Size(951, 443);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnbatal);
             this.Controls.Add(this.btnPesan);
@@ -135,7 +143,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PenukaranHadiah";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Penukaran Hadiah";
             this.ResumeLayout(false);
             this.PerformLayout();
