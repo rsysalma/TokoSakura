@@ -16,5 +16,12 @@ namespace TokoSakura
         {
             InitializeComponent();
         }
+
+        private void PembelianBarang_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'tokoSakuraDataSet1.Pembelian' table. You can move, or remove it, as needed.
+            this.pembelianTableAdapter.Fill(this.tokoSakuraDataSet1.Pembelian);
+
+        }
     }
 }

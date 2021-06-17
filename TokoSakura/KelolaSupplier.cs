@@ -14,6 +14,15 @@ namespace TokoSakura
 {
     public partial class KelolaSupplier : Form
     {
+        public string GetConnectionDB()
+        {
+            //sekar
+            string ConnectionString = @"Integrated Security=true; Data Source=LAPTOP-2F1SV60V\MSSQLSERVER01; Initial Catalog=TokoSakura";
+            // salma
+            //string connectionString = "integrated security = true; data source =.; initial catalog = TokoSakura";
+            return ConnectionString;
+        }
+
         public KelolaSupplier()
         {
             InitializeComponent();
@@ -25,7 +34,7 @@ namespace TokoSakura
 
         public string autogenerateID(string firstText, string query)
         {
-            string connectionString = "integrated security = true; data source =.; initial catalog = TokoSakura";
+            string connectionString = GetConnectionDB();
             SqlCommand sqlCmd;
             SqlConnection sqlCon;
             string result = "";
@@ -62,9 +71,7 @@ namespace TokoSakura
             txtID.Clear();
             txtNoTelp.Clear();
             txtAlamat.Clear();
-
             string query = "SELECT TOP 1 Kode_Supplier FROM Supplier ORDER BY Kode_Supplier DESC";
-
             txtID.Text = autogenerateID("SPL", query);
             txtID.Enabled = false;
         }
@@ -141,19 +148,28 @@ namespace TokoSakura
             }
         }
 
-        private void btnSimpan_Click(object sender, EventArgs e)
+        private void KelolaSupplier_Load(object sender, EventArgs e)
+        {
+            btnCari.Enabled = false;
+            btnUbah.Enabled = false;
+            btnHapus.Enabled = false;
+            // TODO: This line of code loads data into the 'tokoSakuraDataSet1.Supplier' table. You can move, or remove it, as needed.
+            this.supplierTableAdapter1.Fill(this.tokoSakuraDataSet1.Supplier);
+            //salma
+            //this.supplierTableAdapter.Fill(this.tokoSakuraDataSet.Supplier);
+        }
+
+        private void btnSimpan_Click_1(object sender, EventArgs e)
         {
             if (txtID.Text == "" || txtNama.Text == "" || txtNoTelp.Text == "" || txtAlamat.Text == "")
             {
                 MessageBox.Show
-                  ("Seluruh data wajib diisi!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                  ("Seluruh data wajib diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                string connectionstring =
-             "integrated security=true; data source=.; initial catalog=TokoSakura";
+                string connectionstring = GetConnectionDB();
                 SqlConnection connection = new SqlConnection(connectionstring);
-
                 SqlCommand insert = new SqlCommand("sp_InputSupplier", connection);
                 insert.CommandType = CommandType.StoredProcedure;
                 insert.Parameters.AddWithValue("Kode_Supplier", txtID.Text);
@@ -165,28 +181,21 @@ namespace TokoSakura
                 {
                     connection.Open();
                     insert.ExecuteNonQuery();
-                    MessageBox.Show("Data saved succesfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data berhasil disimpan", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Unable to saved: " + ex.Message);
+                    MessageBox.Show("Gagal menyimpan data, error : " + ex.Message);
                 }
             }
         }
 
-        private void btnbatal_Click(object sender, EventArgs e)
-        {
-            clear();
-            txtID.Enabled = true;
-        }
-
-        private void btnCari_Click(object sender, EventArgs e)
+        private void btnCari_Click_1(object sender, EventArgs e)
         {
             try
             {
-
-                string connectionString = "integrated security = true; data source =.; initial catalog = TokoSakura";
+                string connectionString = GetConnectionDB();
                 SqlConnection con = new SqlConnection(connectionString);
                 con.Open();
                 DataTable dt = new DataTable();
@@ -194,73 +203,66 @@ namespace TokoSakura
                 cmd.Connection = con;
                 cmd.CommandText = "sp_CariSupplier";
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Kode_Supplier", txtID.Text);
+                cmd.Parameters.AddWithValue("Kode_Supplier", txtID.Text);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
                 txtNama.Text = dt.Rows[0]["Nama_Supplier"].ToString();
                 txtAlamat.Text = dt.Rows[0]["Alamat"].ToString();
                 txtNoTelp.Text = dt.Rows[0]["No_Telepon"].ToString();
-
-                txtID.ReadOnly = true;
-                txtNama.Enabled = true;
+                txtID.Enabled = false;
+                txtNama.Enabled = false;
                 txtAlamat.Enabled = true;
                 txtNoTelp.Enabled = true;
+                btnCari.Enabled = false;
                 con.Close();
             }
             catch
             {
-
-                MessageBox.Show
-                  ("Data Tidak Ditemukan!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                MessageBox.Show("Data Tidak Ditemukan!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private void btnUbah_Click(object sender, EventArgs e)
+        private void btnUbah_Click_1(object sender, EventArgs e)
         {
             if (txtID.Text == "" || txtNama.Text == "" || txtAlamat.Text == "" || txtNoTelp.Text == "")
             {
                 MessageBox.Show
-                  ("Seluruh data wajib diisi!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                  ("Seluruh data wajib diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                string connectionstring =
-             "integrated security=true; data source=.; initial catalog=TokoSakura";
+                string connectionstring = GetConnectionDB();
                 SqlConnection connection = new SqlConnection(connectionstring);
 
                 SqlCommand update = new SqlCommand("sp_UpdateSupplier", connection);
                 update.CommandType = CommandType.StoredProcedure;
                 update.Parameters.AddWithValue("Kode_Supplier", txtID.Text);
-                update.Parameters.AddWithValue("Nama_Supplier", txtNama.Text);
                 update.Parameters.AddWithValue("Alamat", txtAlamat.Text);
                 update.Parameters.AddWithValue("No_Telepon", txtNoTelp.Text);
-
                 try
                 {
                     connection.Open();
                     update.ExecuteNonQuery();
-                    MessageBox.Show("Data updated succesfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data berhasil diupdate", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Unable to saved: " + ex.Message);
+                    MessageBox.Show("Gagal update data, error : " + ex.Message);
                 }
             }
         }
 
-        private void btnHapus_Click(object sender, EventArgs e)
+        private void btnHapus_Click_1(object sender, EventArgs e)
         {
             if (txtID.Text == "" || txtNama.Text == "" || txtAlamat.Text == "" || txtNoTelp.Text == "")
             {
                 MessageBox.Show
-                  ("Seluruh data wajib diisi!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                  ("Seluruh data wajib diisi!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                string connectionstring =
-             "integrated security=true; data source=.; initial catalog=TokoSakura";
+                string connectionstring = GetConnectionDB();
                 SqlConnection connection = new SqlConnection(connectionstring);
 
                 SqlCommand delete = new SqlCommand("sp_DeleteSupplier", connection);
@@ -272,23 +274,25 @@ namespace TokoSakura
                 {
                     connection.Open();
                     delete.ExecuteNonQuery();
-                    MessageBox.Show("Data deleted succesfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Data berhasil dihapus", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Unable to saved: " + ex.Message);
+                    MessageBox.Show("Gagal hapus data, error : " + ex.Message);
                 }
             }
         }
 
-        private void KelolaSupplier_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'tokoSakuraDataSet.Supplier' table. You can move, or remove it, as needed.
-            this.supplierTableAdapter.Fill(this.tokoSakuraDataSet.Supplier);
-
+            clear();
+            btnSimpan.Enabled = false;
+            btnCari.Enabled = true;
+            btnUbah.Enabled = true;
+            btnHapus.Enabled = true;
+            txtID.Text = "";
+            txtID.Enabled = true;
         }
-
-    
     }
 }

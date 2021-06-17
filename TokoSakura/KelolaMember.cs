@@ -17,8 +17,10 @@ namespace TokoSakura
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void KelolaMember_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'tokoSakuraDataSet1.Member' table. You can move, or remove it, as needed.
+            this.memberTableAdapter.Fill(this.tokoSakuraDataSet1.Member);
 
         }
     }

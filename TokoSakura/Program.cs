@@ -16,7 +16,7 @@ namespace TokoSakura
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KelolaBarang());
+            Application.Run(new Manager());
         }
     }
 }
