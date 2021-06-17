@@ -16,5 +16,10 @@ namespace TokoSakura
         {
             InitializeComponent();
         }
+
+        private void PenukaranHadiah_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -137,6 +137,7 @@
             this.DoubleBuffered = true;
             this.Name = "PenukaranHadiah";
             this.Text = "Penukaran Hadiah";
+            this.Load += new System.EventHandler(this.PenukaranHadiah_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
